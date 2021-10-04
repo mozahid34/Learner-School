@@ -1,23 +1,65 @@
 import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter, Link, Route, Switch } from 'react-router-dom';
+import { Container, Navbar, NavLink } from 'react-bootstrap';
+import Home from './component/home/Home';
+import About from './component/About/About';
+import Service from './component/service/Service';
+import Notfound from './component/notfound/Notfound';
+import Footer from './component/footer/Footer';
+import Teacher from './component/Teacher/Teacher';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+      <Container>
+  <Navbar expand="lg" variant="dark" bg="dark">
+    <Container>
+      <Navbar.Brand className="tab display-3" href="/"> Learner School </Navbar.Brand>
+      <Link className= "nav" to="/home" >Home</Link>
+        <Link className= "nav" to = "/service" >Service</Link>
+        <Link className= "nav" to ="/teacher"> Instractor </Link>
+        <Link className= "nav" to = "/about" >About</Link>
+
+    </Container>
+  </Navbar>
+</Container>
+      
+          <Switch>
+          <Route path = "/home">
+          <Home></Home>
+         </Route>
+
+         <Route path = "/about">
+            <About></About>
+         </Route>
+
+         <Route path = "/teacher">
+           <Teacher></Teacher>
+         </Route>
+
+         <Route path = "/service">
+           <Service></Service>
+
+         </Route>
+
+         <Route exact path ="/">
+           <Home></Home>
+
+         </Route>
+
+         <Route exact = "*">
+           <Notfound></Notfound>
+         </Route>
+          </Switch>
+      
+      </BrowserRouter>
+      
+
+      
+
+      <Footer></Footer>
     </div>
   );
 }

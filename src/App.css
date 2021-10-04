@@ -28,6 +28,27 @@
   color: #61dafb;
 }
 
+.container {
+  background-color: skyblue;
+  padding: 10px;
+  justify-content: space-between;
+}
+.tab {
+  margin-left: 0%;
+  font-size: 200%;
+  margin-right: 400px;
+  font-weight: bolder;
+  text-decoration: none;
+  color: green;
+}
+
+.nav {
+  margin-right: 50px;
+  text-decoration: none;
+  font-weight: 800;
+  color: black;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
