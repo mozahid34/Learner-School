@@ -12,7 +12,7 @@ const Home = () => {
     },[])
     return (
         <div>
-            <h1>Welcome to Our School</h1>
+            <h1 className="text-success" >Welcome to Our School</h1>
             <div className="list">
             {
                 courses.map(course => <Detail

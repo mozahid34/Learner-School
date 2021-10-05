@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Link, Route, Switch } from 'react-router-dom';
 import { Container, Navbar, NavLink } from 'react-bootstrap';
 import Home from './component/home/Home';
@@ -14,9 +15,9 @@ function App() {
     <div className="App">
       <BrowserRouter>
       <Container>
-  <Navbar expand="lg" variant="dark" bg="dark">
+  <Navbar fixed="top" expand="lg" variant="light" bg="primary">
     <Container>
-      <Navbar.Brand className="tab display-3" href="/"> Learner School </Navbar.Brand>
+      <Navbar.Brand className="tab display-3" href="/"> <h2>Learner School</h2> </Navbar.Brand>
       <Link className= "nav" to="/home" >Home</Link>
         <Link className= "nav" to = "/service" >Service</Link>
         <Link className= "nav" to ="/teacher"> Instractor </Link>
@@ -24,7 +25,7 @@ function App() {
 
     </Container>
   </Navbar>
-</Container>
+</Container> <br /> <br />
       
           <Switch>
           <Route path = "/home">
